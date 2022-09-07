@@ -1,0 +1,4 @@
+C:\Users\PC\documents\visual studio 2015\Projects\Tín Phát Metech\Model\bin\Debug\Model.dll
+C:\Users\PC\documents\visual studio 2015\Projects\Tín Phát Metech\Model\bin\Debug\Model.pdb
+C:\Users\PC\documents\visual studio 2015\Projects\Tín Phát Metech\Model\obj\Debug\Model.dll
+C:\Users\PC\documents\visual studio 2015\Projects\Tín Phát Metech\Model\obj\Debug\Model.pdb

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TinPhatModelStoreContainer" CdmEntityContainer="TinPhatEntities">
+    <EntitySetMapping Name="KH">
+      <EntityTypeMapping TypeName="TinPhatModel.KH">
+        <MappingFragment StoreEntitySet="KH">
+          <ScalarProperty Name="Ma_KH" ColumnName="Ma_KH" />
+          <ScalarProperty Name="Ten_KH" ColumnName="Ten_KH" />
+          <ScalarProperty Name="Diachi_KH" ColumnName="Diachi_KH" />
+          <ScalarProperty Name="Note_KH" ColumnName="Note_KH" />
+          <ScalarProperty Name="Is_NCC" ColumnName="Is_NCC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NCC">
+      <EntityTypeMapping TypeName="TinPhatModel.NCC">
+        <MappingFragment StoreEntitySet="NCC">
+          <ScalarProperty Name="Ma_NCC" ColumnName="Ma_NCC" />
+          <ScalarProperty Name="Ten_NCC" ColumnName="Ten_NCC" />
+          <ScalarProperty Name="Diachi_NCC" ColumnName="Diachi_NCC" />
+          <ScalarProperty Name="Note_NCC" ColumnName="Note_NCC" />
+          <ScalarProperty Name="Is_KH" ColumnName="Is_KH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NV">
+      <EntityTypeMapping TypeName="TinPhatModel.NV">
+        <MappingFragment StoreEntitySet="NV">
+          <ScalarProperty Name="By_Date" ColumnName="By_Date" />
+          <ScalarProperty Name="Creat_Date" ColumnName="Creat_Date" />
+          <ScalarProperty Name="Ma_NV" ColumnName="Ma_NV" />
+          <ScalarProperty Name="Image_NV" ColumnName="Image_NV" />
+          <ScalarProperty Name="Ma_To" ColumnName="Ma_To" />
+          <ScalarProperty Name="Ma_User" ColumnName="Ma_User" />
+          <ScalarProperty Name="Ten_NV" ColumnName="Ten_NV" />
+          <ScalarProperty Name="Gioitinh_NV" ColumnName="Gioitinh_NV" />
+          <ScalarProperty Name="Diachi_NV" ColumnName="Diachi_NV" />
+          <ScalarProperty Name="SDT_NV" ColumnName="SDT_NV" />
+          <ScalarProperty Name="CMT_NV" ColumnName="CMT_NV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="TinPhatModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="By_Date" ColumnName="By_Date" />
+          <ScalarProperty Name="Creat_Date" ColumnName="Creat_Date" />
+          <ScalarProperty Name="Ma_User" ColumnName="Ma_User" />
+          <ScalarProperty Name="Ma_NV" ColumnName="Ma_NV" />
+          <ScalarProperty Name="User1" ColumnName="User" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Permision" ColumnName="Permision" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="To">
+      <EntityTypeMapping TypeName="TinPhatModel.To">
+        <MappingFragment StoreEntitySet="To">
+          <ScalarProperty Name="Theodoi_To" ColumnName="Theodoi_To" />
+          <ScalarProperty Name="Note_To" ColumnName="Note_To" />
+          <ScalarProperty Name="Ten_To" ColumnName="Ten_To" />
+          <ScalarProperty Name="Ma_To" ColumnName="Ma_To" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chucvu">
+      <EntityTypeMapping TypeName="TinPhatModel.Chucvu">
+        <MappingFragment StoreEntitySet="Chucvu">
+          <ScalarProperty Name="Theodoi_CV" ColumnName="Theodoi_CV" />
+          <ScalarProperty Name="Note_CV" ColumnName="Note_CV" />
+          <ScalarProperty Name="Ten_CV" ColumnName="Ten_CV" />
+          <ScalarProperty Name="Ma_CV" ColumnName="Ma_CV" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BTP">
+      <EntityTypeMapping TypeName="TinPhatModel.BTP">
+        <MappingFragment StoreEntitySet="BTP">
+          <ScalarProperty Name="Image_BTP" ColumnName="Image_BTP" />
+          <ScalarProperty Name="Note_BTP" ColumnName="Note_BTP" />
+          <ScalarProperty Name="Gia_BTP" ColumnName="Gia_BTP" />
+          <ScalarProperty Name="TKCP_BTP" ColumnName="TKCP_BTP" />
+          <ScalarProperty Name="Ma_Kho" ColumnName="Ma_Kho" />
+          <ScalarProperty Name="SLMin_BTP" ColumnName="SLMin_BTP" />
+          <ScalarProperty Name="DVT_BTP" ColumnName="DVT_BTP" />
+          <ScalarProperty Name="Ten_BTP" ColumnName="Ten_BTP" />
+          <ScalarProperty Name="Ma_BTP" ColumnName="Ma_BTP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DongiaSP">
+      <EntityTypeMapping TypeName="TinPhatModel.DongiaSP">
+        <MappingFragment StoreEntitySet="DongiaSP">
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="DVT" ColumnName="DVT" />
+          <ScalarProperty Name="Ten_SP" ColumnName="Ten_SP" />
+          <ScalarProperty Name="Ma_SP" ColumnName="Ma_SP" />
+          <ScalarProperty Name="Ma_DG" ColumnName="Ma_DG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DVCD">
+      <EntityTypeMapping TypeName="TinPhatModel.DVCD">
+        <MappingFragment StoreEntitySet="DVCD">
+          <ScalarProperty Name="Note_DVCD" ColumnName="Note_DVCD" />
+          <ScalarProperty Name="Tyle_DVCD" ColumnName="Tyle_DVCD" />
+          <ScalarProperty Name="Ten_DVCD" ColumnName="Ten_DVCD" />
+          <ScalarProperty Name="Ma_DVCD" ColumnName="Ma_DVCD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MaQC">
+      <EntityTypeMapping TypeName="TinPhatModel.MaQC">
+        <MappingFragment StoreEntitySet="MaQC">
+          <ScalarProperty Name="Theodoi_QC" ColumnName="Theodoi_QC" />
+          <ScalarProperty Name="Trung_QC" ColumnName="Trung_QC" />
+          <ScalarProperty Name="Ten_QC" ColumnName="Ten_QC" />
+          <ScalarProperty Name="Ma_QC" ColumnName="Ma_QC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NVL">
+      <EntityTypeMapping TypeName="TinPhatModel.NVL">
+        <MappingFragment StoreEntitySet="NVL">
+          <ScalarProperty Name="Image_NL" ColumnName="Image_NL" />
+          <ScalarProperty Name="Note_NL" ColumnName="Note_NL" />
+          <ScalarProperty Name="Gia_NL" ColumnName="Gia_NL" />
+          <ScalarProperty Name="TKCP_NL" ColumnName="TKCP_NL" />
+          <ScalarProperty Name="Ma_Kho" ColumnName="Ma_Kho" />
+          <ScalarProperty Name="SLMin_NL" ColumnName="SLMin_NL" />
+          <ScalarProperty Name="DVT_NL" ColumnName="DVT_NL" />
+          <ScalarProperty Name="Ten_NL" ColumnName="Ten_NL" />
+          <ScalarProperty Name="Ma_NL" ColumnName="Ma_NL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THSP">
+      <EntityTypeMapping TypeName="TinPhatModel.THSP">
+        <MappingFragment StoreEntitySet="THSP">
+          <ScalarProperty Name="Ma_THSP" ColumnName="Ma_THSP" />
+          <ScalarProperty Name="Note" ColumnName="Note" />
+          <ScalarProperty Name="Ma_NV" ColumnName="Ma_NV" />
+          <ScalarProperty Name="Tien" ColumnName="Tien" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="SL" ColumnName="SL" />
+          <ScalarProperty Name="DVT" ColumnName="DVT" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="Ma_Kho" ColumnName="Ma_Kho" />
+          <ScalarProperty Name="Date_THSP" ColumnName="Date_THSP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP">
+      <EntityTypeMapping TypeName="TinPhatModel.TP">
+        <MappingFragment StoreEntitySet="TP">
+          <ScalarProperty Name="Image_TP" ColumnName="Image_TP" />
+          <ScalarProperty Name="Note_TP" ColumnName="Note_TP" />
+          <ScalarProperty Name="Gia_TP" ColumnName="Gia_TP" />
+          <ScalarProperty Name="TKDT_TP" ColumnName="TKDT_TP" />
+          <ScalarProperty Name="Ma_Kho" ColumnName="Ma_Kho" />
+          <ScalarProperty Name="DVT_TP" ColumnName="DVT_TP" />
+          <ScalarProperty Name="Ten_TP" ColumnName="Ten_TP" />
+          <ScalarProperty Name="Ma_TP" ColumnName="Ma_TP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

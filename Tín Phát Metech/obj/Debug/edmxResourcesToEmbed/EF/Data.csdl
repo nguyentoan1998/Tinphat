@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TinPhatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KH">
+    <Key>
+      <PropertyRef Name="Ma_KH" />
+    </Key>
+    <Property Name="Ma_KH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ten_KH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diachi_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Note_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Is_NCC" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NCC">
+    <Key>
+      <PropertyRef Name="Ma_NCC" />
+    </Key>
+    <Property Name="Ma_NCC" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ten_NCC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Diachi_NCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Note_NCC" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Is_KH" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NV">
+    <Key>
+      <PropertyRef Name="Ma_NV" />
+    </Key>
+    <Property Name="Ma_NV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Image_NV" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="Ma_To" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ma_User" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_NV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Gioitinh_NV" Type="Boolean" Nullable="false" />
+    <Property Name="Diachi_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SDT_NV" Type="Int32" />
+    <Property Name="CMT_NV" Type="Int32" />
+    <Property Name="Creat_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="By_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Ma_User" />
+    </Key>
+    <Property Name="Ma_User" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Ma_NV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="User1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Permision" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Creat_Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="By_Date" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="TinPhatEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KH" EntityType="Self.KH" />
+    <EntitySet Name="NCC" EntityType="Self.NCC" />
+    <EntitySet Name="NV" EntityType="Self.NV" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <EntitySet Name="To" EntityType="TinPhatModel.To" />
+    <EntitySet Name="Chucvu" EntityType="TinPhatModel.Chucvu" />
+    <EntitySet Name="BTP" EntityType="TinPhatModel.BTP" />
+    <EntitySet Name="DongiaSP" EntityType="TinPhatModel.DongiaSP" />
+    <EntitySet Name="DVCD" EntityType="TinPhatModel.DVCD" />
+    <EntitySet Name="MaQC" EntityType="TinPhatModel.MaQC" />
+    <EntitySet Name="NVL" EntityType="TinPhatModel.NVL" />
+    <EntitySet Name="THSP" EntityType="TinPhatModel.THSP" />
+    <EntitySet Name="TP" EntityType="TinPhatModel.TP" />
+  </EntityContainer>
+  <EntityType Name="To">
+    <Key>
+      <PropertyRef Name="Ma_To" />
+    </Key>
+    <Property Name="Ma_To" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_To" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note_To" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Theodoi_To" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Chucvu">
+    <Key>
+      <PropertyRef Name="Ma_CV" />
+    </Key>
+    <Property Name="Ma_CV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_CV" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Note_CV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Theodoi_CV" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BTP">
+    <Key>
+      <PropertyRef Name="Ma_BTP" />
+    </Key>
+    <Property Name="Ma_BTP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_BTP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DVT_BTP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SLMin_BTP" Type="Int16" />
+    <Property Name="Ma_Kho" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TKCP_BTP" Type="Byte" />
+    <Property Name="Gia_BTP" Type="Decimal" Precision="8" Scale="0" />
+    <Property Name="Note_BTP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image_BTP" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DongiaSP">
+    <Key>
+      <PropertyRef Name="Ma_DG" />
+    </Key>
+    <Property Name="Ma_DG" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ma_SP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_SP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DVT" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SL" Type="Int16" Nullable="false" />
+    <Property Name="Gia" Type="Int16" Nullable="false" />
+    <Property Name="Note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DVCD">
+    <Key>
+      <PropertyRef Name="Ma_DVCD" />
+    </Key>
+    <Property Name="Ma_DVCD" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_DVCD" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Tyle_DVCD" Type="Byte" Nullable="false" />
+    <Property Name="Note_DVCD" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MaQC">
+    <Key>
+      <PropertyRef Name="Ma_QC" />
+    </Key>
+    <Property Name="Ma_QC" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_QC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Trung_QC" Type="Boolean" Nullable="false" />
+    <Property Name="Theodoi_QC" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NVL">
+    <Key>
+      <PropertyRef Name="Ma_NL" />
+    </Key>
+    <Property Name="Ma_NL" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_NL" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DVT_NL" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SLMin_NL" Type="Int16" />
+    <Property Name="Ma_Kho" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TKCP_NL" Type="Byte" />
+    <Property Name="Gia_NL" Type="Decimal" Precision="8" Scale="0" />
+    <Property Name="Note_NL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image_NL" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="THSP">
+    <Key>
+      <PropertyRef Name="Date_THSP" />
+      <PropertyRef Name="Ma_THSP" />
+    </Key>
+    <Property Name="Date_THSP" Type="Byte" Nullable="false" />
+    <Property Name="Ma_THSP" Type="Decimal" Nullable="false" Precision="3" Scale="1" />
+    <Property Name="Ma_Kho" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TenSP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DVT" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="SL" Type="Int16" Nullable="false" />
+    <Property Name="Gia" Type="Int16" Nullable="false" />
+    <Property Name="Tien" Type="Decimal" Nullable="false" Precision="8" Scale="0" />
+    <Property Name="Ma_NV" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TP">
+    <Key>
+      <PropertyRef Name="Ma_TP" />
+      <PropertyRef Name="Ten_TP" />
+      <PropertyRef Name="DVT_TP" />
+    </Key>
+    <Property Name="Ma_TP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ten_TP" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DVT_TP" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Ma_Kho" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="TKDT_TP" Type="Byte" />
+    <Property Name="Gia_TP" Type="Decimal" Precision="8" Scale="0" />
+    <Property Name="Note_TP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Image_TP" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>
